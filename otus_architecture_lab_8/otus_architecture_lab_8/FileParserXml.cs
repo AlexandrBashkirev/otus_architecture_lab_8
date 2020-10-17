@@ -1,26 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace otus_architecture_lab_8
 {
-    public class FileParserXml : HandlerBase
+    public class FileParserXml : FileParcerBase
     {
         #region Methods
 
-        public override void Handle(object request)
+        protected override bool CanParce(string path)
         {
-            if(request is string path &&
-                path.EndsWith(".xml"))
-            {
+            return path.EndsWith(".xml");
+        }
 
-            }
-            else
-            {
-                parent.Handle(request);
-            }
+
+        protected override void Parce(string path)
+        {
+            SimpleServiceLocator.Instance.GetService<ILogger>().Log($"FileParserXml parce: {path}");
         }
 
         #endregion

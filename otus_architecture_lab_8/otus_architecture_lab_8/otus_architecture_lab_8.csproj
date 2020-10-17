@@ -42,7 +42,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CmdParser.cs" />
     <Compile Include="FileLogger.cs" />
+    <Compile Include="FileParcerBase.cs" />
     <Compile Include="FileParserCsv.cs" />
     <Compile Include="FileParserJson.cs" />
     <Compile Include="FileParserTxt.cs" />
