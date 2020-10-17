@@ -38,13 +38,13 @@ namespace otus_architecture_lab_8
             IHandler xml = new FileParserXml();
 
             IHandler txt = new FileParserTxt();
-            txt.SetParrent(xml);
+            txt.SetParent(xml);
 
             IHandler csv = new FileParserCsv();
-            csv.SetParrent(txt);
+            csv.SetParent(txt);
 
             IHandler json = new FileParserJson();
-            json.SetParrent(csv);
+            json.SetParent(csv);
             
             return json;
         }

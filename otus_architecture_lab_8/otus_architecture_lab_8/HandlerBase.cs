@@ -17,7 +17,7 @@ namespace otus_architecture_lab_8
         public abstract void Handle(object request);
 
 
-        public void SetParrent(IHandler parent)
+        public void SetParent(IHandler parent)
         {
             this.parent = parent;
         }
